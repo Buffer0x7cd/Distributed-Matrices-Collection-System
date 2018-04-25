@@ -49,4 +49,4 @@ All riemann nodes are shredded based on therir geographic location.
 
 **4. Grafana:** A grafana instance will be connected with the InfluxDB, we will use grafana for visulization of the time series data that is stored in the InfluxDB Cluster.
 
-![Diagram](https://imgur.com/a/EpoLwiB)
+![Diagram](https://github.com/Buffer0x7cd/Distributed-Matrices-Collection-System/raw/master/matrices.png)
