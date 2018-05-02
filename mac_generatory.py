@@ -4,9 +4,6 @@ import os
 import argparse
 import random
 
-CREATE_TABLE = '''CREATE TABLE IF NOT EXISTS (?)
-                (id INTEGER PRIMARY KEY, ethernetMac TEXT UNIQUE, wirelessMac TEXT UNIQUE)'''
-TABLE_NAME= "macid"
 
 def get_options():
     parser = argparse.ArgumentParser()
@@ -41,7 +38,6 @@ def getMacPair():
         wirelessMac = randomMAC()
     return (ethernetMac, wirelessMac)
 
-
 def main(dbname, N):
     with sqlite3.connect(dbname) as conn:
         cursor = conn.cursor()
@@ -62,5 +58,4 @@ def main(dbname, N):
 
 if __name__ == "__main__":
     args = get_options()
-    print(args.dbname, args.N)
     main(args.dbname, args.N)
